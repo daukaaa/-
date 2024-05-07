@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Banking Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app" class="hidden">
+  <div class="balance-section">
+    <h2>Current balance</h2>
+    <div class="balance-amount">0€</div>
+  </div>
+
+  <div class="transaction-section"></div>
+
+<div>
+    <h3>Transfer money</h3>
+    <input type="text" id="transfer-to" placeholder="Transfer to">
+    <input type="number" id="transfer-amount" placeholder="Amount">
+    <button class="btn transfer">Transfer</button>
+  </div>
+  
+  <div>
+    <h3>Request loan</h3>
+    <input type="number" id="loan-amount" placeholder="Amount">
+    <button class="btn loan">Request loan</button>
+  </div>
+  
+  <div>
+    <h3>Close account</h3>
+    <input type="text" id="close-username" placeholder="Confirm user">
+    <input type="password" id="close-pin" placeholder="Confirm PIN">
+    <button class="btn close">Close account</button>
+  </div>
+  
+
+  <div class="summary">
+    <p>In: <span class="summary-in">0€</span></p>
+    <p>Out: <span class="summary-out">0€</span></p>
+    <p>Interest: <span class="summary-interest">0€</span></p>
+  </div>
+
+  <button class="btn btn-sort">SORT</button>
+
+  <div class="logout-timer">
+    You will be logged out in <span class="timer">05:00</span>
+  </div>
+</div>
+
+<form id="login-form">
+  <div class="form-group">
+    <label for="login-username">Username:</label>
+    <input type="text" id="login-username" required>
+  </div>
+  <div class="form-group">
+    <label for="login-pin">PIN code:</label>
+    <input type="password" id="login-pin" required>
+  </div>
+  <button type="submit">Login</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
